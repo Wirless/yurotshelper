@@ -32,18 +32,24 @@
 </nav>
 			<div class="jumbotron">
 				<h2>
-					YurOTS Engine
+					Actions and creating our own first quest!
 				</h2>
 				<p>
-					<a class="btn btn-primary btn-large" href="https://github.com/divinity76/YurOTS">Download Yurots 0.9.4d</a>
+					<a class="btn btn-primary btn-large" href="https://remeresmapeditor.com/marklar.php">Download Map editor</a>
 				</p>
 				<p>
-					To begin our journey onto hosting the Tibia servers we should first download the distribution of yurots after downloading we can extract it to any folder we desire.
-					To play/test the files you will need a Tibia 7.6 client with IP Changer from Otland You can download it here:
-					<a class="btn btn-success" href="https://static.otland.net/ipchanger.exe">Download IP Changer</a>
-					Client that is required to play can be downloaded here version for yurots is 7.6:
-					<a class="btn btn-warning" href="https://otservlist.org/download">Download Client</a>
+					First we should download the map editor to be able to add to the map. <br>
+					Then we should proceed to data/actions and open actions.xml and add a new line anywhere that will look like this: <br>
+					<p> &ltaction uniqueid="itemid" script="quest.lua" /&gt <br><br> where uniqueid we can choose any item from 1000-4000 and filename quest.lua as the script is written already. </p>
+					as an example it would look like this:
+					&ltaction uniqueid="2640" script="quest.lua" /&gt <br>
+				<br>
+		
+				basically what this will do is attach uniqueid and check what item has corresponding ID rewarding player with thus item and making it locked so he can't grab 2 of them by addressing unique storage to player.
+				
 				</p>
+				<br>
+				warning some map editors might not work well with yurots what needs to be done is the .otbm file needs to be opened with Hex editor and bytes ending world-house.xml needs to be removed so that break that is after those ends after world-spawns.xml
 				
 				
 			</div>
